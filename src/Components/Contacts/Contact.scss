@@ -1,0 +1,182 @@
+@import "../../main.scss";
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.contact {
+  // background-color: white;
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  display: flex;
+  
+
+  @include mobile {
+    
+    flex-direction: column;
+  }
+  .contact__icons > a > button > span > .MuiSvgIcon-root {
+    
+    color: rgb(8, 243, 47);
+    font-size: 30px;
+  }
+  .contact__icons{
+    scrollbar-width: none; //for firefox                                                  //TODO
+    &::-webkit-scrollbar{
+        display: none ;
+    }
+  }
+  
+  .contact__icons > a > .MuiIconButton-root {
+    color: rgb(8, 243, 125) !important;
+  }
+  .left {
+    flex: 1;
+    overflow: hidden;
+    @include mobile {
+      flex:0.5;
+    }
+    .txtxa{
+      font-size: 130px;
+      font-family: 'Great Vibes', cursive;
+      text-align: center;
+      margin-top: 30%;
+      color: azure;
+      @include mobile {
+        margin-top: 15%;
+        font-size: 70px;
+      }
+    }
+    img {
+      margin-left: auto;
+        margin-right: auto;
+        display: block;
+        height:600px;
+        width: 600px;
+      @include mobile {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        height:150px;
+        width: 300px;
+      }
+    }
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    scrollbar-width: none; //for firefox                                                  //TODO
+          &::-webkit-scrollbar{
+              display: none ;
+          }
+    // @include mobile {
+    //  margin-top: 2%;
+      
+    // }
+
+    h2 {
+      font-size: 30px;
+      color: azure;
+      scrollbar-width: none; //for firefox                                                  //TODO
+          &::-webkit-scrollbar{
+              display: none ;
+          } 
+    }
+
+    form {
+      width: 50%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      //todo
+      background-color: rgb(3, 8, 63);
+    border-radius: 16px;
+    box-shadow: 2px 2px  2px 2px rgb(15, 15, 15);
+    padding: 5px;
+      @include mobile {
+        width: 70%;
+        padding: 5px;
+        justify-content: center;
+       }
+
+      input {
+        width: 300px;
+        height: 30px;
+        font-size: 14px;
+       
+
+        @include mobile {
+          scrollbar-width: none; //for firefox                                                  //TODO
+          &::-webkit-scrollbar{
+              display: none ;
+          }
+          width: 200px;
+          height: 20px;
+          
+        }
+      }
+
+      textarea {
+        width: 300px;
+        height: 200px;
+        font-size: 14px;
+
+        @include mobile {
+          width: 200px;
+          height: 100px;
+        }
+      }
+
+      button {
+        width: 150px;
+        height: 30px;
+        color: white;
+        background-color: crimson;
+        border: none;
+        border-radius: 10px;
+        font-weight: 500;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      span {
+        color: rgb(9, 211, 9);
+        scrollbar-width: none; //for firefox                                                  //TODO
+          &::-webkit-scrollbar{
+              display: none ;
+          }
+      }
+    }
+  }
+}
+.spanza {
+  color: rgb(9, 211, 9);
+}
+.la{
+  text-align: left !important;
+    color: azure;
+}
+@media screen and  (max-width: 600px){
+  .spanza {
+    scrollbar-width: none; //for firefox                                                  //TODO
+          &::-webkit-scrollbar{
+              display: none ;
+          }
+    font-size: 15px;
+    padding-top: 2%;
+    color: green;
+  }
+  .la{
+    margin-bottom: 1%;
+    text-align: left !important;
+    color: azure;
+    scrollbar-width: none; //for firefox                                                  //TODO
+            &::-webkit-scrollbar{
+                display: none ;
+            }
+  }
+}

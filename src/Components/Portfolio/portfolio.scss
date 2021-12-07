@@ -1,0 +1,110 @@
+@import "../../main.scss";
+
+.portfolio {
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+.Aboutcontainer{
+  color: white;
+  flex: 0.6;
+  text-align: left;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+.Zani{
+  margin-top: 10%;
+  align-self: flex-end;
+  position: relative;
+  animation: about 2s linear infinite;
+  // animation-delay: 2s;
+  animation-fill-mode: both;
+  animation-direction: alternate-reverse;
+}
+@keyframes about {
+  0%   { transform: translateY(0); }
+  // 25%   { transform: translateX(0); }
+  50%  { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+
+}
+
+.Imagecontainer{
+  flex:0.4;
+  text-align: center;
+  margin-right: 80px;
+  
+}
+.About_img{
+  width: 500px;
+  border-radius: 3px;
+  object-fit: contain;
+
+}
+.About_text{
+  font-weight: 500;
+}
+.resume__downloadButton {
+  color: white;
+  background-color: #f64c08;
+  font-size: 14px;
+  padding: 10px 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.resume__downloadButton:hover {
+  color: #f64c08;
+  background-color: white;
+  font-weight: 600;
+}
+@media screen and  (max-width: 600px){
+  .portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .Imagecontainer{
+    flex:50%
+  }
+  .About_img{
+    padding-top: 10%;
+    // padding-left: 10%;
+    margin-left: 18%;
+    // margin-left: auto;
+    // display: block;
+    display: flex;
+    height: 200px;
+    width: 300px;
+  }
+  .Aboutcontainer{
+    flex: 50%;
+    
+  }
+  .About_textH{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+  }
+  .About_text{
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .resume__downloadButton{
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
+  }
+}
+                                                //TODO///////////////
+  

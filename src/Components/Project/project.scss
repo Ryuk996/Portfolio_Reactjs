@@ -1,0 +1,210 @@
+@import "../../main.scss";
+
+.works {
+  // background-color: rgb(9, 241, 222);
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  display: flex ;
+  align-items: center;
+  position: relative;
+  // justify-content: center;
+  
+  @include mobile {
+    display: flex ;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+  .arrow {
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    color: rgb(255, 254, 254);
+
+    @include mobile {
+      display: none;
+    }
+
+    &.left {
+      left: 100px;
+      // transform: rotateY(180deg);
+    }
+
+    &.right {
+      right: 100px;
+    }
+  }
+  .texpr {
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40%;
+    // position: absolute;
+    
+  
+    @include mobile{
+      font-size: 20px;
+
+    }
+  }
+
+    
+
+  .slider {
+    height: 350px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease-out;
+
+    @include mobile {
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      // width: 70%;
+        // height: 150px;
+        // margin: 15px 0;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        overflow-x: hidden;
+          overflow-y: auto;
+          scroll-behavior: smooth;
+          scroll-snap-type: y mandatory;
+      
+    }
+
+    .container {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include mobile {
+        width: 80%;
+        height: 200px;
+        margin: 5px 0;
+        border-radius: 20px;
+        overflow-x: hidden;
+          overflow-y: auto;
+          scroll-behavior: smooth;
+          scroll-snap-type: y mandatory;
+      }
+
+      .item {
+        width: 700px;
+        height: 100%;
+        // background-color: white;
+        border-radius: 20px;                                                  //TODO
+        display: flex;
+        box-shadow: 2px 0px  2px 0px rgb(15, 15, 15);                       //TODO
+        background-color: rgb(247, 247, 248);                                    //TODO
+        align-items: center;
+      
+        justify-content: center;
+
+        .left {
+          flex: 4;
+          height: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .leftContainer {
+            width: 90%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .imgContainer {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: rgb(245, 179, 155);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              @include mobile {
+                width: 20px;
+                height: 20px;
+              }
+
+              img {
+                width: 25px;
+
+                @include mobile {
+                  width: 15px;
+                }
+              }
+            }
+            h2 {
+              font-size: 20px;
+
+              @include mobile{
+                font-size: 13px;
+              }
+            }
+            p {
+              font-size: 13px;
+              font-weight: 500;
+              @include mobile{
+                display: none;
+              }
+            }
+            span {
+              font-size: 20px;
+              font-weight: 600;
+              text-decoration: underline;
+              cursor: pointer;
+
+              @include mobile {                                     //TODO
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .right {
+          flex: 8;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          
+          @include mobile {                                     //TODO
+            flex: 12;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+          }
+
+          img {
+            width: 400px;
+            // transform: rotate(-10deg);
+
+            @include mobile {                                     //TODO
+              width: 300px;
+              height: 100px;
+              object-fit: contain;
+              padding-right: 70%;
+              transform: rotate(0deg)
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and  (max-width: 600px){
+  .item{
+    transition :all .2s ease-in-out;
+  }
+  .item:hover{
+        transform : scale(1.1);
+        box-shadow: 0 0 10px 5px rgb(120, 248, 242)
+       }
+}
+
+

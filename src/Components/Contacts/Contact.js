@@ -62,11 +62,11 @@ function Contact() {
   }
     return (
         <div ref={ref} className="contact" id="contact">
-        <motion.div className="left" animate={animationTxt}>
+        <motion.div className="leftC" animate={animationTxt}>
           {/* <img src="/Assets/bumper-sticker-brand-png-favpng-dPj2Ki0vZZFqAZWSbFskZVTRX.jpg" alt="" /> */}
           <h4 className="txtxa">Hello!</h4>
         </motion.div>
-        <motion.div className="right" >
+        <motion.div className="rightC" >
           <h2>Contact.</h2>
           <form onSubmit={handleSubmit} >
             <label className="la">Name</label>

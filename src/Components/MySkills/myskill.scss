@@ -140,6 +140,7 @@
 }
 @media screen and  (max-width: 600px){
   #myskills.skillContainer{
-    height: 80%;
+    height: 80% !important;
+    padding-bottom: 150px;
   }
 }

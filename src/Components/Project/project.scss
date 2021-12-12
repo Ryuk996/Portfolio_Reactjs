@@ -13,6 +13,7 @@
     display: flex ;
     align-items: center;
     flex-direction: column;
+    
   }
 
 
@@ -70,9 +71,9 @@
         margin-top: 10%;
         margin-bottom: 10%;
         overflow-x: hidden;
-          overflow-y: auto;
-          scroll-behavior: smooth;
-          scroll-snap-type: y mandatory;
+          // overflow-y: visible;
+          // scroll-behavior: smooth;
+          // scroll-snap-type: y mandatory;
       
     }
 
@@ -87,9 +88,9 @@
         margin: 5px 0;
         border-radius: 20px;
         overflow-x: hidden;
-          overflow-y: auto;
-          scroll-behavior: smooth;
-          scroll-snap-type: y mandatory;
+          // overflow-y: auto;
+          // scroll-behavior: smooth;
+          // scroll-snap-type: y mandatory;
       }
 
       .item {
@@ -211,6 +212,9 @@
         transform : scale(1.1);
         box-shadow: 0 0 10px 5px rgb(120, 248, 242)
        }
+  #works.works{
+    height: 120%;
+  }     
 }
 
 

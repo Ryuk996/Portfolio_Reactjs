@@ -28,9 +28,9 @@
   .leftC {
     flex: 1;
     overflow: hidden;
-    @include mobile {
-      flex:0.5;
-    }
+    // @include mobile {
+    //   flex:0.5;
+    // }
     .txtxa{
       font-size: 130px;
       font-family: 'Great Vibes', cursive;
@@ -169,15 +169,19 @@
             }
   }
   .contact{
-    display: flex;
+    display: flex !important;
     // align-items: center;
     // justify-content: center;
-    flex-direction: column;
+    flex-direction: column !important;
   }
   .leftC{
-    flex:50%;
+    flex:25% !important;
   }
   .rightC{
-    flex: 50%;
+    flex: 75% !important;
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
   }
 }

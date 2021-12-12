@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import { useEffect } from "react";
 import './App.scss';
 import Header from './Components/Header/header';
 import Topbar from './Components/Topbar/Topbar';
@@ -9,8 +9,11 @@ import Project from './Components/Project/Project';
 import Contact from './Components/Contacts/Contact';
 import {useState} from "react";
 import Myskills from './Components/MySkills/Myskill';
+
+
 function App() {
 
+ 
   const [menuOpen,setMenuOpen] = useState(false)
  
   return (
@@ -20,7 +23,7 @@ function App() {
     <div className="sections">
       <Intro/>
       <Portfolio/>
-      <Myskills/>
+      < Myskills/>
       <Project/>
       <Contact/>
     </div>

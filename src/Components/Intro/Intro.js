@@ -2,6 +2,8 @@ import "./intro.scss"
 import { init } from "ityped";
 import { useEffect, useRef,useState } from "react";
 // import { motion } from 'framer-motion';
+import Aos from 'aos';
+import "aos/dist/aos.css"
 
 function Intro() {
 
@@ -18,13 +20,18 @@ function Intro() {
 
   }, []);
 
+  useEffect(() => {
+    Aos.init({duration:1500})
+    Aos.refresh();
+    
+  }, [])
  
 
     return (
 
     <div className="intro" id="intro">
       <div className="left">
-        <div className="imgContainer">
+        <div data-aos ="fade-right" className="imgContainer">
           <img  src="/Assets/My Post (4).jpg" alt="" />
         </div>
       </div>

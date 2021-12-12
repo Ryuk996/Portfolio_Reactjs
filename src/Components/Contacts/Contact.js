@@ -1,29 +1,58 @@
 import React from 'react'
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { IconButton } from "@material-ui/core";
 import { Facebook, GitHub, Instagram, LinkedIn } from "@material-ui/icons";
 import "./Contact.scss";
 import emailjs from "emailjs-com"
+import { motion } from 'framer-motion';
+import {useInView} from 'react-intersection-observer'
+import {useAnimation} from 'framer-motion';
 
 function Contact() {
     const [message, setMessage] = useState("");
     const [senderName, setSenderName] = useState("");
     const [senderMail, setSenderMail] = useState("");
     const [fieldFalse,setFalse] = useState(true)
+    const {ref , inView} = useInView({threshold: 0.3});
+    const animationTxt = useAnimation();
+    const animationForm = useAnimation();
+
+    useEffect(() => {                                                         // renders everytime when the div comes in viewport
+      console.log("useEffect hpp inView",inView)
+      if(inView){
+        animationTxt.start({
+          x:0,
+          transition:{
+            type:'spring' , duration: 2, bounce: 0.3
+          }
+        })
+        animationForm.start({
+          y:0,
+          transition:{
+            type:'tween', duration: 2, bounce: 0.3
+          }
+        })
+      }
+      if(!inView){
+        animationTxt.start({x:'-100vw'})
+        animationForm.start({y:'100vw'})
+      }
+    },[inView])
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const k =2;
     console.log(senderName)
     console.log(senderMail)
     console.log(message)
-    if( (senderMail || senderName || message ) ==" "){
+    if( !senderName || !senderMail || !message ){                                         //evaluating empty string ot array
        setFalse(true)
       console.log("false")
     }else{
       console.log("done")
     emailjs.sendForm("service_7bfhwtj","template_vvwt14z",e.target,"user_8oz05kUSUZgXljQcm4jnl")
       .then(res=>{
-        console.log(res);
+        // console.log(res);
         setFalse(false);
       }).catch(err=> console.log(err))
       setMessage("")
@@ -32,14 +61,14 @@ function Contact() {
     }
   }
     return (
-        <div className="contact" id="contact">
-        <div className="left">
+        <div ref={ref} className="contact" id="contact">
+        <motion.div className="left" animate={animationTxt}>
           {/* <img src="/Assets/bumper-sticker-brand-png-favpng-dPj2Ki0vZZFqAZWSbFskZVTRX.jpg" alt="" /> */}
           <h4 className="txtxa">Hello!</h4>
-        </div>
-        <div className="right">
+        </motion.div>
+        <motion.div className="right" >
           <h2>Contact.</h2>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} >
             <label className="la">Name</label>
             <input type="text" placeholder="Name" name="senderName" value={senderName} onChange={e =>setSenderName(e.target.value)} />
             {/* <br></br> https://img.freepik.com/free-vector/hello-word-memphis-background_136321-401.jpg?size=626&ext=jpg*/}
@@ -73,7 +102,7 @@ function Contact() {
           </a>
          
         </div>
-        </div>
+        </motion.div>
       </div>
     )
 }

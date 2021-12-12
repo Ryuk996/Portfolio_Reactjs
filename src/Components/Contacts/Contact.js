@@ -68,6 +68,7 @@ function Contact() {
         </motion.div>
         <motion.div className="rightC" >
           <h2>Contact.</h2>
+          <div className="contactpageZ">
           <form onSubmit={handleSubmit} >
             <label className="la">Name</label>
             <input type="text" placeholder="Name" name="senderName" value={senderName} onChange={e =>setSenderName(e.target.value)} />
@@ -80,6 +81,7 @@ function Contact() {
             <button type="submit">Send</button>
             {/* <br></br> */}
           </form>
+          </div>
           {fieldFalse ? <span className='spanza'>*Fill all fields</span> : <span className='spanza'>Thanks, I'll reply ASAP :</span> }
           <div className="contact__icons">
           <a
@@ -102,6 +104,7 @@ function Contact() {
           </a>
          
         </div>
+        
         </motion.div>
       </div>
     )

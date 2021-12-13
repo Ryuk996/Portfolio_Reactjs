@@ -18,15 +18,16 @@
         > *{
             width: 100vw;
             height: calc(100vh - 70px);
-            // scroll-snap-align: start;                                     //TODO
+            scroll-snap-align: start;                                     //TODO
         }
     }
 }
 @media screen and  (max-width: 600px){
     .sections{
-        scrollbar-width: none; //for firefox                                //TODO
-         &::-webkit-scrollbar{
-             display: none ;
-        }
+        scroll-snap-type: y proximity !important;
+        // scrollbar-width: none; //for firefox                                //TODO
+        //  &::-webkit-scrollbar{
+        //      display: none ;
+        // }
     }
 }

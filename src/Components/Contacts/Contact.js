@@ -61,8 +61,14 @@ function Contact() {
     }
   }
     return (
-          <div className="contactpageZ">
-            <h2>Contact.</h2>
+           <div ref={ref} className="contact" id="contact">
+         <motion.div className="leftC" animate={animationTxt}>
+           <img src="/Assets/bumper-sticker-brand-png-favpng-dPj2Ki0vZZFqAZWSbFskZVTRX.jpg" alt="" /> 
+          <h4 className="txtxa">Hello!</h4>
+        </motion.div>
+        <motion.div className="rightC" >
+           <h2>Contact.</h2>
+          
           <form onSubmit={handleSubmit} >
             <label className="la">Name</label>
             <input type="text" placeholder="Name" name="senderName" value={senderName} onChange={e =>setSenderName(e.target.value)} />
@@ -73,9 +79,34 @@ function Contact() {
             <textarea placeholder="Message" name="message" value={message} onChange={e =>setMessage(e.target.value)}></textarea>
             <br></br>
             <button type="submit">Send</button>
-            {/* <br></br> */}
+             <br></br> 
           </form>
-          </div>
+         
+          {fieldFalse ? <span className='spanza'>*Fill all fields</span> : <span className='spanza'>Thanks, I'll reply ASAP :</span> }
+          <div className="contact__icons">
+          <a
+            href="https://www.linkedin.com/in/thirunavukkarasu-kumaravel-a71b35147"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconButton>
+              <LinkedIn />
+            </IconButton>
+          </a>
+          <a
+            href="https://github.com/Ryuk996"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconButton>
+              <GitHub />
+            </IconButton>
+          </a>
+         
+        </div>
+        
+        </motion.div>
+      </div> 
           
     )
 }
@@ -129,3 +160,20 @@ export default Contact
         
         </motion.div>
       </div> */}
+
+
+      // <div className="contactpageZ">
+          //   <h2>Contact.</h2>
+          // <form onSubmit={handleSubmit} >
+          //   <label className="la">Name</label>
+          //   <input type="text" placeholder="Name" name="senderName" value={senderName} onChange={e =>setSenderName(e.target.value)} />
+          //   {/* <br></br> https://img.freepik.com/free-vector/hello-word-memphis-background_136321-401.jpg?size=626&ext=jpg*/}
+          //   <label className="la">Email</label>
+          //   <input type="email" placeholder="Email" name="senderMail" value={senderMail} onChange={e =>setSenderMail(e.target.value)} />
+          //   <br></br>
+          //   <textarea placeholder="Message" name="message" value={message} onChange={e =>setMessage(e.target.value)}></textarea>
+          //   <br></br>
+          //   <button type="submit">Send</button>
+          //   {/* <br></br> */}
+          // </form>
+          // </div>

@@ -73,7 +73,7 @@
         overflow-x: hidden;
           // overflow-y: visible;
           // scroll-behavior: smooth;
-          // scroll-snap-type: y mandatory;
+          // scroll-snap-type: y ;
       
     }
 
@@ -213,7 +213,9 @@
         box-shadow: 0 0 10px 5px rgb(120, 248, 242)
        }
   #works.works{
-    height: 120%;
+    scroll-behavior: smooth;
+    scroll-snap-type: y ;
+    //height: 120%;
   }     
 }
 

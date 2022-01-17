@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import Portfoliolist from "../PortfolioList//Portfoliolist";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import "./myskill.scss";
-// import Aos from 'aos';
-// import "aos/dist/aos.css"
 import { motion } from 'framer-motion';
 import {useInView} from 'react-intersection-observer'
 import {useAnimation} from 'framer-motion';

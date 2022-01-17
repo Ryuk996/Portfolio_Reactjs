@@ -1,6 +1,8 @@
 import React from 'react'
 import './project.scss'
 import { useState } from "react";
+import { Facebook, GitHub, Instagram, Link } from "@material-ui/icons";
+import { LinkIcon } from '@heroicons/react/outline';
 
 import { ChevronDoubleLeftIcon,ChevronDoubleRightIcon } from '@heroicons/react/outline';
 function Project() {
@@ -88,17 +90,17 @@ function Project() {
               <div className="left">
                 <div className="leftContainer">
                   <div className="imgContainer">
-                    <img src={d.icon} alt="" />
+                    <img className="projImg" src={d.icon} alt="" />
                   </div>
                   <h2>{d.title}</h2>
                   <p >{d.desc}</p>
-                  <span><a  href={`${d.project}`} target="_blank" >Project</a></span>
-                  <span><a  href={`${d.frontEndUrl}`} target="_blank" >FrontEnd Git url</a></span>           
-                  <span><a  href={`${d.BackEndUrl}`} target="_blank" >Backend Git url</a></span>
+                  <span className="linkz"><a   href={`${d.project}`} target="_blank" >Project</a></span>
+                  <span className="linkz"><a   href={`${d.frontEndUrl}`} target="_blank" >FrontEnd Git url<GitHub className="iconZ"/></a></span>           
+                  <span className="linkz"><a   href={`${d.BackEndUrl}`} target="_blank" >Backend Git url<GitHub className="iconZ"/></a></span>
                 </div>
               </div>
               <div className="right">
-                <img
+                <img style={{height : "200px" , width : "200px" , objectFit : "contain"}}
                   src={d.img}
                   alt=""
                 />

@@ -59,6 +59,8 @@
 
 .skillContainer__slider > .MuiLinearProgress-colorPrimary {
   background-color: rgb(88, 88, 88);
+  padding: 2px;
+  border-radius: 16px;
 }
 
 .skillContainer__slider1 > div > .MuiLinearProgress-barColorPrimary {
@@ -138,9 +140,11 @@
     width: 80%;
   }
 }
-@media screen and  (max-width: 600px){
-  #myskills.skillContainer{
-    height: 80% !important;
-    padding-bottom: 150px;
-  }
-}
+// @media screen and  (max-width: 600px){
+//   #myskills.skillContainer{
+//     height: 80% !important;
+//   }
+//   // .skillContainer__text {
+//   //   margin-bottom: 100px !important;
+//   // }
+// }

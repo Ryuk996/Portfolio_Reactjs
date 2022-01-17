@@ -31,7 +31,7 @@ function Intro() {
 
     <div className="intro" id="intro">
       <div className="left">
-        <div data-aos ="fade-right" className="imgContainer">
+        <div data-aos ="fade-right" className="imgContainerz">
           <img  src="/Assets/My Post (4).jpg" alt="" />
         </div>
       </div>

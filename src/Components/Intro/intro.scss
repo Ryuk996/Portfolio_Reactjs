@@ -13,7 +13,7 @@
     flex: 0.5;
     overflow: hidden;
 
-    .imgContainer {
+    .imgContainerz {
       width: 700px;
       height: 700px;
       // background-color: white;
@@ -64,7 +64,7 @@
         color: #fff;
 
         @include mobile{
-          font-size: 40px;
+          font-size: 35px;
           padding: 15px;
         }
       }
@@ -75,7 +75,7 @@
       }
       h3 {
         font-size: 30px;
-
+        color:rgb(0, 255, 242);
         @include mobile{
           font-size: 20px;
         }
@@ -117,3 +117,13 @@
     }
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1125px) {
+  h1{
+    font-size: 40px !important;
+  }
+  .imgContainerz {
+    height: 700px !important;
+    width: 500px !important;
+    
+  }
+ }

@@ -14,6 +14,7 @@
   text-align: left;
   max-width: 500px;
   margin-bottom: 20px;
+  padding: 5%;                                                       //TODO
 }
 .Zani{
   margin-top: 10%;
@@ -63,6 +64,17 @@
   background-color: white;
   font-weight: 600;
 }
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {                        //TODO
+  .About_img{
+   width: 250px;
+   height: 280px;
+  }
+  // .Aboutcontainer{
+  //   margin-right: 10px;
+  // }
+ }
+
 @media screen and  (max-width: 600px){
   .portfolio {
     display: flex;
@@ -71,7 +83,11 @@
     flex-direction: column;
   }
   .Imagecontainer{
-    flex:50%
+    flex:50%;
+    scrollbar-width: none; //for firefox                                                  //TODO
+            &::-webkit-scrollbar{
+                display: none ;
+            }
   }
   .About_img{
     padding-top: 10%;
@@ -85,6 +101,10 @@
   }
   .Aboutcontainer{
     flex: 50%;
+    scrollbar-width: none; //for firefox                                                  //TODO
+            &::-webkit-scrollbar{
+                display: none ;
+            }
     
   }
   .About_textH{
@@ -96,7 +116,8 @@
   .About_text{
     justify-content: center;
     align-items: center;
-    padding-left: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
     font-size: 14px;
     font-weight: 300;
   }
@@ -104,6 +125,30 @@
     justify-content: center;
     align-items: center;
     margin-left: 20%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 568px) {                        //TODO
+  .About_img{
+    width: 200px;
+    height: 100px;
+   }
+   .Imagecontainer{
+    flex:35%;
+    scrollbar-width: none; //for firefox                                                  //TODO
+            &::-webkit-scrollbar{
+                display: none ;
+            }
+  }
+  .Aboutcontainer{
+    flex: 65%;
+    scrollbar-width: none; //for firefox                                                  //TODO
+            &::-webkit-scrollbar{
+                display: none ;
+            }
+    
+  }
+  .Zani{
+   margin-top: 20%;
   }
 }
                                                 //TODO///////////////

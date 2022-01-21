@@ -94,9 +94,9 @@ function Project() {
                   </div>
                   <h2>{d.title}</h2>
                   <p >{d.desc}</p>
-                  <span className="linkz"><a   href={`${d.project}`} target="_blank" >Project</a></span>
-                  <span className="linkz"><a   href={`${d.frontEndUrl}`} target="_blank" >FrontEnd Git url<GitHub className="iconZ"/></a></span>           
-                  <span className="linkz"><a   href={`${d.BackEndUrl}`} target="_blank" >Backend Git url<GitHub className="iconZ"/></a></span>
+                  <a   href={`${d.project}`} target="_blank" className="linkz" >Project</a>
+                  <a   href={`${d.frontEndUrl}`} target="_blank" className="linkz" >FrontEnd Git url<GitHub className="iconZ"/></a>
+                  <a   href={`${d.BackEndUrl}`} target="_blank" className="linkz" >Backend Git url<GitHub className="iconZ"/></a>        
                 </div>
               </div>
               <div className="right">

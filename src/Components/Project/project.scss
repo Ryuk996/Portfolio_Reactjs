@@ -7,7 +7,12 @@
   display: flex ;
   align-items: center;
   position: relative;
+  height: 100vh !important;
   // justify-content: center;
+  // scrollbar-width: none; //for firefox                                                  //TODO
+  // &::-webkit-scrollbar{
+  //     display: none ;
+  // }
   
   @include mobile {
     display: flex ;
@@ -111,10 +116,11 @@
         justify-content: center;
         @include mobile {
           position: relative;
+          box-shadow: none;
         }
         .left {
           flex: 4;
-          height: 80%;
+          height: 85%;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -147,6 +153,9 @@
               -ms-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
               text-align: center;
+              margin-left: auto;
+              margin-right: auto;
+              width: 200px;
         }
 
 
@@ -195,12 +204,15 @@
               }
             }
             .linkz {
-              font-size: 20px;
-              font-weight: 600;
+              font-size: 16px;
+              font-weight: 400;
               padding: 2px;
-              //text-decoration: underline;
+              margin-top: 3px;
+              text-decoration: none !important;
               cursor: pointer;
-              color: rgb(1, 1, 20) !important;
+              color: rgb(244, 244, 248) !important;
+              background-color: rgb(3, 3, 58);
+              border-radius: 10px;
               //flex: 1;
               scrollbar-width: none; //for firefox                                                  //TODO
               &::-webkit-scrollbar{
@@ -208,7 +220,11 @@
               }
 
               @include mobile {                                     //TODO
+                font-weight: 600;
                 font-size: 12px;
+                //padding: 2px 5px !important;
+                background-color:transparent !important;
+                border-radius: 0px !important;
                 color: black !important;
                 scrollbar-width: none; //for firefox                                                  //TODO
               &::-webkit-scrollbar{
@@ -218,6 +234,13 @@
             }
             .linkz:hover {
               border: 2px solid rgb(0, 1, 44);
+              
+              @include mobile {
+                //text-align: center;
+              //width: 200px;
+              //margin-left: auto;
+              //margin-right: auto;
+              }
               //box-shadow: 0 0 10px 5px rgb(120, 248, 242)
             }
             .iconZ{
@@ -251,22 +274,7 @@
             flex: 12;
             height: 100%;
             display: flex;
-              // height: 100%;
-              // position: absolute;
-              // top: 0;
-              // bottom: 0;
-              // left: 0;
-              // right: 0;
-              // // height: 100%;
-              // // width: 100%;
-              // opacity: 0;
-              // transition: .5s ease;
-              // background-color: #008CBA;
-      
-            //display: block !important;
-            // align-items: center;
-            // justify-content: center;
-            // overflow: hidden;
+              
           }
 
           .projImg {
@@ -319,12 +327,27 @@
               }
   // //   scroll-behavior: smooth;
   // //   scroll-snap-type: y ;
-      height: 120%;
+      height: 120% !important;
   }     
 }
-@media only screen and (min-width: 568px) and (max-width: 750px) {
+@media only screen and (min-width: 750px) and (max-width: 768px) {
+  #works.works{
+    height: 130% !important;
+  }
   .container{
-    // height: 120% !important;
+     
+    align-items: center !important;
+      justify-content: center !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+  }
+}
+
+@media only screen and (min-width: 568px) and (max-width: 750px) {
+  #works.works{
+    height: 130% !important;
+  }
+  .container{
     align-items: center !important;
       justify-content: center !important;
       margin-left: auto !important;
@@ -338,24 +361,33 @@
     width: 600px !important;
   }
 }
-// @media only screen and (min-width: 320px) and (max-width: 568px) {
+// @media only screen and (min-width: 360px) and (max-width: 568px) {
 //   .container{
 //     // height: 120% !important;
 //     align-items: center !important;
 //       justify-content: center !important;
-//     padding-left: 10px !important;
-//     padding-right: 10px !important;
+//     padding-left: 50px !important;
+//     padding-right: 30px !important;
 //     //margin-left: 15% !important;
 //     //margin-right: 5% !important;
     
 //   }
-//   .item{
-//    // height:120% !important;
-//     width: 350px !important;
-//   // border-radius: 16px !important;
-//   }
-// }
-
+// // //   .item{
+// // //    // height:120% !important;
+// // //     //width: 400px !important;
+// // //   // border-radius: 16px !important;
+// //   }
+//  }
+                //Height
+@media only screen  and (max-height: 680px) {
+  #works.works{
+    // scrollbar-width: none; //for firefox                                                  //TODO
+    //           &::-webkit-scrollbar{
+    //               display: none ;
+    //           }
+    height: 110vh !important;
+}
+}
 @media only screen  and (max-width: 568px) { 
   // .slider{
   //   justify-content: center;

@@ -106,7 +106,7 @@
         height: 30px;
         font-size: 14px;
         border-radius: 10px;
-        
+    
 
         @include mobile {
           scrollbar-width: none; //for firefox                                                  //TODO
@@ -165,6 +165,10 @@
 .la{
   text-align: left !important;
     color: azure;
+    scrollbar-width: none; //for firefox                                                  //TODO
+    &::-webkit-scrollbar{
+        display: none ;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1240px) {                        //TODO
   input{

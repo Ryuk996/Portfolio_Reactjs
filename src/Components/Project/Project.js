@@ -109,9 +109,9 @@ function Project() {
           </div>
         ))}
       </div>
-      <ChevronDoubleLeftIcon className="arrow left" onClick={() => handleClick("left")}></ChevronDoubleLeftIcon>
+      {/* <ChevronDoubleLeftIcon className="arrow left" onClick={() => handleClick("left")}></ChevronDoubleLeftIcon>
   
-      <ChevronDoubleRightIcon className="arrow right" onClick={() => handleClick()} ></ChevronDoubleRightIcon>
+      <ChevronDoubleRightIcon className="arrow right" onClick={() => handleClick()} ></ChevronDoubleRightIcon> */}
     </div>
     </>
     )

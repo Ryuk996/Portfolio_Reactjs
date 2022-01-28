@@ -7,11 +7,12 @@
   display: flex ;
   align-items: center;
   position: relative;
-  height: 100vh !important;
+  height: 120vh !important;
   // justify-content: center;
   // scrollbar-width: none; //for firefox                                                  //TODO
   // &::-webkit-scrollbar{
   //     display: none ;
+  //flex-direction: row;
   // }
   
   @include mobile {
@@ -46,12 +47,14 @@
     font-weight: 700;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40%;
+    //margin-bottom: 40%;
     text-transform: capitalize;
     // position: absolute;
-    
+    //TODO
+    margin-bottom: 40%;
   
     @include mobile{
+      margin-bottom: 5%;
       font-size: 20px;
 
     }
@@ -60,11 +63,22 @@
     
 
   .slider {
-    height: 350px;
-    display: flex;
-    position: absolute;
-    left: 0;
-    transition: all 1s ease-out;
+    height: 500px;                                                                  //TODO350px
+     //display: flex;
+     position: absolute;
+    //left: 0;
+    //transition: all 1s ease-out;
+    //flex-direction: row;
+    //width: 700px;
+    //margin-left: 5%;
+    //TODO
+    //margin-bottom: 5%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center;
+    //display: grid;
+   // position: absolute;
 
     @include mobile {
       height: 100vh;
@@ -85,13 +99,21 @@
     }
 
     .container {
-      width: 100vw;
-      display: flex;
+      //width: 100vw;
+      //display: flex;
       align-items: center;
       justify-content: center;
+      //TODO
+      width: 100%;
+      display: grid;
+      //grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      justify-items: center;
+      margin: 20px 0;
+    
+   // margin-bottom: 10%;
       @include mobile {
         width: 80% ;
-        height: 400px;
+        //height: 400px;
         margin: 5px ;
         //padding-right: 20px ;
         //padding-left: 20px ;
@@ -104,26 +126,45 @@
       }
 
       .item {
-        width: 700px;
-        height: 100%;
+        position: relative;
         background-color: rgb(0, 255, 242);
         border-radius: 20px;                                                  //TODO
-        display: flex;
+        //display: flex;
         box-shadow: 0 0 20px rgb(0, 255, 242);                       //TODO
        // background-color: rgb(247, 247, 248);                                    //TODO
         align-items: center;
-      
+        //flex-direction: row;                                                          //TODO
         justify-content: center;
+        //TODO
+        width: 80%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+        justify-items: center;
+        margin: 20px 0;
+        
         @include mobile {
           position: relative;
           box-shadow: none;
         }
         .left {
-          flex: 4;
-          height: 85%;
+           flex: 4;
+          height: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
+          //TODO
+          //height: 100%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          // height: 100%;
+          // width: 100%;
+          opacity: 0;
+          transition: .5s ease;
+          background-image: linear-gradient(to right top, #ea118c, #eb1492, #eb1899, #eb1c9f, #eb20a6, #db4cca, #c36ae8, #a483ff, #42adff, #00ceff, #00e7ff, #5ffbf1);
             @include mobile {
                 height: 100%;
                 position: absolute;
@@ -143,6 +184,19 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            //TODO
+            color: rgb(0, 1, 41);
+              font-size: 15px !important;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+              text-align: center;
+              margin-left: auto;
+              margin-right: auto;
+              //width: 200px;
             @include mobile {                                                         //TODO
               color: rgb(212, 9, 9);
               font-size: 15px;
@@ -160,13 +214,8 @@
 
 
             .imgContainer {
-              width: 40px;
-              height: 40px;
-              border-radius: 50%;
-              background-color: rgb(245, 179, 155);
-              display: flex;
-              align-items: center;
-              justify-content: center;
+              
+              display: none;
 
               @include mobile {
                 // width: 20px;
@@ -253,12 +302,7 @@
                 padding: 1px;
                 //color: black !important;
               }
-              //padding-left: 10px;
-              //justify-content:flex-end;
-              // align-items: flex-end;
-              // justify-items: flex-end;
-              // justify-content: flex-end;
-              // align-content: flex-start-end;
+              
             }
           }
         }
@@ -292,17 +336,63 @@
           }
         }
       }
+      .item:hover .left {
+        opacity: 1 !important; 
+        box-shadow: 0 0 10px 5px rgb(120, 248, 242)
+       }
     }
   }
 }
+
+@media only screen and (min-width: 992px) and (max-width: 1500px) {
+  #works.works{
+    scrollbar-width: none; //for firefox                                                  //TODO
+              &::-webkit-scrollbar{
+                  display: none ;
+              }
+    }
+  .texpr{
+    margin-bottom: 55% !important;
+  }
+  .item{
+    width: 280px !important;
+  }
+}
+@media only screen and (min-width: 890px) and (max-width: 992px) {
+  .texpr{
+    margin-bottom: 75% !important;    //80%
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 890px) {
+  .texpr{
+    margin-bottom: 80% !important;    //90%
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+  
+  
+  .item{
+   width: 280px !important;
+   height: 200px !important;
+   margin: 5px 0 !important;
+  }
+  
+  .slider{
+    margin-top: 10%;
+    height: 92vh !important;
+}
+}
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+  
  .item{
-  width: 500px !important;
-  height: 250px;
+  width: 280px !important;
+  //height: 280px !important;
+  margin: 5px 0 !important;
  }
- .texpr{
-   margin-bottom: 50% !important;
- }
+ .container{
+     margin: 5px 0 !important;
+   }
+ 
  .linkz{
    font-size: 15px !important;
  }
@@ -310,12 +400,8 @@
    font-size: 12px !important;
  }
 }
-@media screen and  (max-width: 900px){
-  // .item{
-  //  // transition :all .2s ease-in-out;
-  //   //width: 350px !important;
-    
-  // }
+@media screen and  (max-width: 992px){
+  
   .item:hover .left {
         opacity: 1 !important; 
         box-shadow: 0 0 10px 5px rgb(120, 248, 242)
@@ -331,8 +417,20 @@
   }     
 }
 @media only screen and (min-width: 750px) and (max-width: 768px) {
+  .item{
+    width: 280px !important;
+    height: 280px !important;
+    margin: 5px 0 !important;
+   }
+   .container{
+    margin: 5px 0 !important;
+  }
+  .slider{
+    height: 180vh !important;
+    //grid-template-columns: repeat(auto-fill, minmax(200px, 2fr)) !important;
+  }
   #works.works{
-    height: 130% !important;
+    height: 200% !important;
   }
   .container{
      
@@ -344,40 +442,35 @@
 }
 
 @media only screen and (min-width: 568px) and (max-width: 750px) {
-  #works.works{
-    height: 130% !important;
+
+  .item{
+    margin: 5px 0 !important;
+   }
+   .container{
+    margin: 5px 0 !important;
   }
+  .slider{
+    grid-template-columns: repeat(auto-fill, minmax(300px, 4fr)) !important;
+  }
+  #works.works{
+    height: 120% !important;
+  }
+
+  // #works.works{
+  //   height: 100% !important;
+  // }
   .container{
     align-items: center !important;
       justify-content: center !important;
       margin-left: auto !important;
       margin-right: auto !important;
-    // padding-right: 20px !important;
-    // padding-left: 20px !important;
-    //margin-left: 15% !important;
-   // margin-right: 5% !important;
+
   }
-  .item{
-    width: 600px !important;
-  }
+  // .item{
+  //   width: 600px !important;
+  // }
 }
-// @media only screen and (min-width: 360px) and (max-width: 568px) {
-//   .container{
-//     // height: 120% !important;
-//     align-items: center !important;
-//       justify-content: center !important;
-//     padding-left: 50px !important;
-//     padding-right: 30px !important;
-//     //margin-left: 15% !important;
-//     //margin-right: 5% !important;
-    
-//   }
-// // //   .item{
-// // //    // height:120% !important;
-// // //     //width: 400px !important;
-// // //   // border-radius: 16px !important;
-// //   }
-//  }
+
                 //Height
 @media only screen  and (max-height: 680px) {
   #works.works{
@@ -385,7 +478,7 @@
     //           &::-webkit-scrollbar{
     //               display: none ;
     //           }
-    height: 110vh !important;
+    height: 120vh !important;
 }
 }
 @media only screen  and (max-width: 568px) { 
@@ -406,7 +499,7 @@
   }
   .item{
    // height:120% !important;
-    width: 330px !important;
+    width: 250px !important;
   // border-radius: 16px !important;
   }
   .projImg{

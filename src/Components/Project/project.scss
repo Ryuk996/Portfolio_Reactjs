@@ -127,10 +127,11 @@
 
       .item {
         position: relative;
-        background-color: rgb(0, 255, 242);
+        //background-color: rgb(0, 255, 242);
+        background-image: linear-gradient(to right bottom, #05eaff, #00bae0, #008cbc, #006192, #003866, #003a67, #003b69, #003d6a, #006997, #0098bd, #00c9db, #5ffbf1);
         border-radius: 20px;                                                  //TODO
         //display: flex;
-        box-shadow: 0 0 20px rgb(0, 255, 242);                       //TODO
+        //box-shadow: 0 0 20px rgb(0, 255, 242);                       //TODO
        // background-color: rgb(247, 247, 248);                                    //TODO
         align-items: center;
         //flex-direction: row;                                                          //TODO
@@ -338,7 +339,11 @@
       }
       .item:hover .left {
         opacity: 1 !important; 
-        box-shadow: 0 0 10px 5px rgb(120, 248, 242)
+        
+       }
+      .item:hover{
+        box-shadow:  0 0 10px 5px rgb(120, 248, 242) !important;
+        //box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
        }
     }
   }

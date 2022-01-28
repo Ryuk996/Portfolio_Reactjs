@@ -7,7 +7,7 @@
   display: flex ;
   align-items: center;
   position: relative;
-  height: 120vh !important;
+  height: 110vh !important;
   // justify-content: center;
   // scrollbar-width: none; //for firefox                                                  //TODO
   // &::-webkit-scrollbar{
@@ -109,6 +109,10 @@
       //grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       justify-items: center;
       margin: 20px 0;
+      scrollbar-width: none; //for firefox                                                  //TODO
+              &::-webkit-scrollbar{
+                  display: none ;
+              }
     
    // margin-bottom: 10%;
       @include mobile {
@@ -143,7 +147,10 @@
         grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
         justify-items: center;
         margin: 20px 0;
-        
+        scrollbar-width: none; //for firefox                                                  //TODO
+              &::-webkit-scrollbar{
+                  display: none ;
+              }
         @include mobile {
           position: relative;
           box-shadow: none;

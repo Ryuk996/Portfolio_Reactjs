@@ -363,6 +363,10 @@
                   display: none ;
               }
     }
+  .slider{
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      //margin: auto;
+    }
   .texpr{
     margin-bottom: 55% !important;
   }

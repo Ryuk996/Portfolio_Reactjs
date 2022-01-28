@@ -356,16 +356,19 @@
   }
 }
 
+@media only screen and (min-width: 1200px) and (max-width: 1500px){
+  .slider{
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)) !important;
+    //margin: auto;
+  }
+}
+
 @media only screen and (min-width: 992px) and (max-width: 1500px) {
   #works.works{
     scrollbar-width: none; //for firefox                                                  //TODO
               &::-webkit-scrollbar{
                   display: none ;
               }
-    }
-  .slider{
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-      //margin: auto;
     }
   .texpr{
     margin-bottom: 55% !important;
